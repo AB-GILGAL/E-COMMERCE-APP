@@ -8,8 +8,8 @@ void main() {
     )
     );
 }
-button(String name, Color bgc, Color txtc, Color bdrc){
-return ElevatedButton(onPressed: (){},
+button(String name, Color bgc, Color txtc, Color bdrc, Function()? nav){
+return ElevatedButton(onPressed: nav,
 style: ButtonStyle(backgroundColor: MaterialStateProperty.all(bgc),
 shape: MaterialStateProperty.all<RoundedRectangleBorder>(
     RoundedRectangleBorder(

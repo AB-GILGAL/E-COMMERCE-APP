@@ -1,14 +1,20 @@
-import 'package:e_commerce/getting_started/register.dart';
-import 'package:e_commerce/main.dart';
 import 'package:flutter/material.dart';
 
-class GetStarted extends StatelessWidget {
-  const GetStarted({super.key});
+import '../getting_started/register.dart';
+import '../main.dart';
 
+class StartShoppingPage extends StatefulWidget {
+  const StartShoppingPage({super.key});
+
+  @override
+  State<StartShoppingPage> createState() => _StartShoppingPageState();
+}
+
+class _StartShoppingPageState extends State<StartShoppingPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Padding(
+      body:Padding(
         padding: const EdgeInsets.symmetric(horizontal: 25),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -22,7 +28,7 @@ class GetStarted extends StatelessWidget {
         ),
         SizedBox(height: MediaQuery.of(context).size.height*0.07,),
         const Center(
-          child:  Text("We promise comfort",
+          child:  Text("Hello Abraham!",
           style: TextStyle(
             // color: Colors.grey,
             fontSize: 25,
@@ -32,22 +38,16 @@ class GetStarted extends StatelessWidget {
         ),
         SizedBox(height: MediaQuery.of(context).size.height*0.02,),
         const Center(
-          child: Text("We offer best comfort product for",
+          child: Text("Your password has been reset",
           style: TextStyle(
             color: Colors.black54,
           ),
           ),
         ),
-        const Center(
-          child: Text("you and your family",
-          style: TextStyle(
-            color: Colors.black54,
-          ),
-          ),
-        ),
+        
         SizedBox(height: MediaQuery.of(context).size.height*0.1,),
         button(
-          "Get Started", Colors.black, Colors.white, Colors.black, (){
+          "Start Shopping", Colors.black, Colors.white, Colors.black, (){
             Navigator.push(context, MaterialPageRoute(builder: (context) {
             return RegisterPage();
           },));

@@ -1,3 +1,5 @@
+import 'package:e_commerce/create_account/sign_in.dart';
+import 'package:e_commerce/create_account/sign_up.dart';
 import 'package:e_commerce/main.dart';
 import 'package:flutter/material.dart';
 
@@ -60,13 +62,13 @@ class RegisterPage extends StatelessWidget {
                         SizedBox(height: MediaQuery.of(context).size.height*0.055,),
                         button("Sign In", Colors.white, Colors.black, Colors.white,(){
             Navigator.push(context, MaterialPageRoute(builder: (context) {
-            return RegisterPage();
+            return LogInPage();
           },));
           }),
           SizedBox(height: MediaQuery.of(context).size.height*0.035,),
            button("Sign Up", Colors.transparent, Colors.white, Colors.white,(){
             Navigator.push(context, MaterialPageRoute(builder: (context) {
-            return RegisterPage();
+            return SignUpPage();
           },));
           })
                   ],

@@ -1,6 +1,7 @@
 import 'package:e_commerce/create_account/sign_in.dart';
 import 'package:e_commerce/getting_started/register.dart';
 import 'package:e_commerce/main.dart';
+import 'package:e_commerce/main_screens/start_shopping.dart';
 import 'package:flutter/material.dart';
 
 class SignUpPage extends StatefulWidget {
@@ -57,7 +58,12 @@ class _SignUpPageState extends State<SignUpPage> {
                     isPasswordVisible,
                     ),
                   SizedBox(height: MediaQuery.of(context).size.height*0.08,),
-                  button("Sign Up", Colors.black, Colors.white, Colors.black, (){})
+                  button("Sign Up", Colors.black, Colors.white, Colors.black,
+                  (){
+                    Navigator.push(context, MaterialPageRoute(builder: (context) {
+                      return const StartShopping();
+                    },));
+                  })
                 ],
               )
               ),

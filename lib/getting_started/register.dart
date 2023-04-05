@@ -62,13 +62,13 @@ class RegisterPage extends StatelessWidget {
                         SizedBox(height: MediaQuery.of(context).size.height*0.055,),
                         button("Sign In", Colors.white, Colors.black, Colors.white,(){
             Navigator.push(context, MaterialPageRoute(builder: (context) {
-            return LogInPage();
+            return const LogInPage();
           },));
           }),
           SizedBox(height: MediaQuery.of(context).size.height*0.035,),
            button("Sign Up", Colors.transparent, Colors.white, Colors.white,(){
             Navigator.push(context, MaterialPageRoute(builder: (context) {
-            return SignUpPage();
+            return const SignUpPage();
           },));
           })
                   ],
